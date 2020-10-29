@@ -18,14 +18,12 @@ class Queue:
         
         
     def dequeue(self):
-        if self.data.size < 0:
-            raise ValueError
         return self.data.popleft()
 
     def is_empty(self):
         if self.data.size == 0:
             return True
-        elif self.data.size >= 0:
+        elif self.data.size > 0:
             return False
 
     
